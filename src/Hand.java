@@ -74,7 +74,7 @@ public class Hand implements Comparable<Hand> {
     	Card.Rank temp = cards.get(0).getRank();
     	int currOrdinal = temp.ordinal();
     	for(int i=1; i<5; ++i){
-    		temp=cards.get(0).getRank();
+    		temp=cards.get(i).getRank();
     		if(temp.ordinal()!=currOrdinal+1){
     			return(false);
     		}
