@@ -30,7 +30,7 @@ public class Hand implements Comparable<Hand> {
     protected boolean hasNKind(int n) {
     	HashMap<Card.Rank,Integer> occurance = new HashMap<Card.Rank,Integer>();
     	for(int i=0; i<5; ++i){
-    		if(occurance.containsKey(cards.get(i).getRank())){
+    		if(!occurance.containsKey(cards.get(i).getRank())){
     			occurance.put(cards.get(i).getRank(),1);
     		}
     		else{
@@ -51,7 +51,7 @@ public class Hand implements Comparable<Hand> {
     public boolean isTwoPair() {
     	HashMap<Card.Rank,Integer> occurance = new HashMap<Card.Rank,Integer>();
     	for(int i=0; i<5; ++i){
-    		if(occurance.containsKey(cards.get(i).getRank())){
+    		if(!occurance.containsKey(cards.get(i).getRank())){
     			occurance.put(cards.get(i).getRank(),1);
     		}
     		else{
